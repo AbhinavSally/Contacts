@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShowContact">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLABEL"
+        android:background="@drawable/vie"/>
+    <TextView
+        android:id="@+id/tvLABEL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="IS THIS WHAT YOU ARE LOOKING FOR?"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        />
+    <ImageView
+        android:id="@+id/ivProfileDISPLAY"
+        style="@style/ivValue"
+        app:layout_constraintTop_toBottomOf="@id/tvLABEL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/sample"/>
+
+    <TextView
+        android:layout_marginTop="32dp"
+        style="@style/tv"
+        android:text="NAME : "
+        app:layout_constraintTop_toBottomOf="@id/ivProfileDISPLAY"
+        android:textColor="@color/pump"
+        app:layout_constraintStart_toStartOf="@id/ivProfileDISPLAY"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileDISPLAY"
+        android:id="@+id/tvDISPLAYNAME"
+        />
+    <EditText
+        android:editable="false"
+        style="@style/et"
+        android:id="@+id/etDISPLAYNAME"
+        app:layout_constraintTop_toBottomOf="@id/tvDISPLAYNAME"
+        android:background="@drawable/etback"
+        app:layout_constraintStart_toStartOf="@id/ivProfileDISPLAY"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileDISPLAY"/>
+    <TextView
+        android:layout_marginTop="16dp"
+        style="@style/tv"
+        android:text="NUMBER : "
+        app:layout_constraintTop_toBottomOf="@id/etDISPLAYNAME"
+        android:textColor="@color/pump"
+        app:layout_constraintStart_toStartOf="@id/ivProfileDISPLAY"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileDISPLAY"
+        android:id="@+id/tvDISPLAYNUMBER"
+        />
+    <EditText
+        android:editable="false"
+        android:padding="10dp"
+        style="@style/et"
+        android:id="@+id/etDISPLAYNUMBER"
+        app:layout_constraintTop_toBottomOf="@id/tvDISPLAYNUMBER"
+        android:background="@drawable/etback"
+        app:layout_constraintStart_toStartOf="@id/ivProfileDISPLAY"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileDISPLAY"/>
+    <Button
+        android:id="@+id/bynSure"
+        style="@style/btn"
+        android:background="@drawable/btn"
+        app:layout_constraintTop_toBottomOf="@id/etDISPLAYNUMBER"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@id/ivProfileDISPLAY"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileDISPLAY"
+        android:text="DONE"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

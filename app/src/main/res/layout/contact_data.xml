@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/ivProfileShow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginVertical="16dp"/>
+    <TextView
+        android:id="@+id/recNAME"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        app:layout_constraintTop_toTopOf="@id/ivProfileShow"
+        app:layout_constraintStart_toEndOf="@id/ivProfileShow"
+        app:layout_constraintEnd_toStartOf="@id/btnOptionShow"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/recNUMBER"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NUMBER"
+        app:layout_constraintEnd_toStartOf="@id/btnOptionShow"
+        app:layout_constraintTop_toBottomOf="@id/recNAME"
+        app:layout_constraintStart_toEndOf="@id/ivProfileShow"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <ImageButton
+        android:id="@+id/btnOptionShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/ic_create_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

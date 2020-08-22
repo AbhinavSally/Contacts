@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate"
+    app:startDestination="@id/whereTo">
+    <fragment
+        android:id="@+id/whereTo"
+        android:name="com.abhi.eg.contacts.whereTo"
+        android:label="fragment_where_to"
+        tools:layout="@layout/fragment_where_to" >
+        <action
+            android:id="@+id/btnLogIn"
+            app:destination="@id/login2" />
+        <action
+            android:id="@+id/action_whereTo_to_signup"
+            app:destination="@id/signup" />
+        <argument
+            android:name="mail"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_whereTo_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.abhi.eg.contacts.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="email_address"
+            app:argType="string" />
+        <argument
+            android:name="pin"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_login2_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.abhi.eg.contacts.signup"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signup_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/recyclerView" >
+        <activity
+            android:id="@+id/recycler"
+            android:name="com.abhi.eg.contacts.Recycler"
+            android:label="activity_recycler"
+            tools:layout="@layout/activity_recycler" />
+        <fragment
+            android:id="@+id/recyclerView"
+            android:name="com.abhi.eg.contacts.RecyclerView"
+            android:label="fragment_recycler_view"
+            tools:layout="@layout/fragment_recycler_view" >
+            <action
+                android:id="@+id/action_recyclerView_to_addContact"
+                app:destination="@id/addContact" />
+            <action
+                android:id="@+id/action_recyclerView_to_editContact"
+                app:destination="@id/editContact" />
+            <action
+                android:id="@+id/action_recyclerView_to_showContact"
+                app:destination="@id/showContact" />
+        </fragment>
+        <fragment
+            android:id="@+id/addContact"
+            android:name="com.abhi.eg.contacts.AddContact"
+            android:label="fragment_add_contact"
+            tools:layout="@layout/fragment_add_contact" >
+            <action
+                android:id="@+id/action_addContact_to_recyclerView"
+                app:destination="@id/recyclerView" />
+        </fragment>
+        <fragment
+            android:id="@+id/editContact"
+            android:name="com.abhi.eg.contacts.EditContact"
+            android:label="fragment_edit_contact"
+            tools:layout="@layout/fragment_edit_contact" >
+            <action
+                android:id="@+id/action_editContact_to_recyclerView"
+                app:destination="@id/recyclerView" />
+            <argument
+                app:argType="com.abhi.eg.contacts.Contact"
+                android:name="Contact"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </fragment>
+        <fragment
+            android:id="@+id/showContact"
+            android:name="com.abhi.eg.contacts.ShowContact"
+            android:label="fragment_show_contact"
+            tools:layout="@layout/fragment_show_contact" >
+            <action
+                android:id="@+id/action_showContact_to_recyclerView"
+                app:destination="@id/recyclerView" />
+            <argument
+                app:argType="com.abhi.eg.contacts.Contact"
+                android:name="Contact"
+                app:nullable="true"
+                android:defaultValue="@null" />
+        </fragment>
+    </navigation>
+</navigation>

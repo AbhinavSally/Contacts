@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".login">
+<TextView
+    style="@style/et"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginHorizontal="16dp"
+    android:text="Email : "
+    android:textColor="@color/offwhite"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:id="@+id/tvEmailLogin"/>
+
+    <EditText
+        android:singleLine="true"
+        android:id="@+id/etEmailLogin"
+        style="@style/tv"
+        android:hint="mail@dev-story.com"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/etback"
+        android:textColor="@color/pump"
+        android:textColorHint="@color/offwhitehint"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailLogin"
+        app:layout_constraintStart_toStartOf="@id/tvEmailLogin"
+        app:layout_constraintEnd_toEndOf="@id/tvEmailLogin"/>
+    <TextView
+       style="@style/tv"
+        android:text="Password :"
+        app:layout_constraintStart_toStartOf="@id/tvEmailLogin"
+        app:layout_constraintEnd_toEndOf="@id/tvEmailLogin"
+        app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
+        android:id="@+id/tvPasswordLogin"/>
+    <EditText
+        android:singleLine="true"
+style="@style/et"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:id="@+id/etPasswordLogin"
+        android:background="@drawable/etback"
+        app:layout_constraintStart_toStartOf="@id/etEmailLogin"
+        app:layout_constraintEnd_toEndOf="@id/etEmailLogin"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLogin"/>
+    <Button
+        android:id="@+id/btnLoginInLogin"
+        style="@style/btn"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn"
+        android:text="SIGN IN"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/tvPasswordLogin"
+        app:layout_constraintEnd_toEndOf="@id/tvPasswordLogin"
+        app:layout_constraintTop_toBottomOf="@id/etPasswordLogin"/>
+
+    <TextView
+        style="@style/tv"
+        android:text="WELCOME \n \t BACK"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textColor="@color/pump"
+        app:layout_constraintStart_toStartOf="@id/btnLoginInLogin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

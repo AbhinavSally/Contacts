@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EditContact">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLABEL1"
+        android:background="@drawable/vie"/>
+    <TextView
+        android:id="@+id/tvLABEL1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="EDIT CONTACT"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+    <ImageView
+        android:id="@+id/ivProfileEdit"
+        style="@style/ivValue"
+        app:layout_constraintTop_toBottomOf="@id/tvLABEL1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/sample"/>
+
+    <TextView
+        android:layout_marginTop="32dp"
+        style="@style/tv"
+        android:text="NAME : "
+        app:layout_constraintTop_toBottomOf="@id/ivProfileEdit"
+        android:textColor="@color/pump"
+        app:layout_constraintStart_toStartOf="@id/ivProfileEdit"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileEdit"
+        android:id="@+id/tvEDITNAME"
+        />
+    <EditText
+        android:singleLine="true"
+        style="@style/et"
+        android:id="@+id/etEDITNAME"
+        app:layout_constraintTop_toBottomOf="@id/tvEDITNAME"
+        android:background="@drawable/etback"
+        app:layout_constraintStart_toStartOf="@id/ivProfileEdit"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileEdit"/>
+    <TextView
+        android:layout_marginTop="16dp"
+        style="@style/tv"
+        android:text="NUMBER : "
+        app:layout_constraintTop_toBottomOf="@id/etEDITNAME"
+        android:textColor="@color/pump"
+        app:layout_constraintStart_toStartOf="@id/ivProfileEdit"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileEdit"
+        android:id="@+id/tvEDITNUMBER"
+        />
+    <EditText
+        android:padding="10dp"
+        style="@style/et"
+        android:singleLine="true"
+        android:inputType="number"
+        android:id="@+id/etEDITNUMBER"
+        app:layout_constraintTop_toBottomOf="@id/tvEDITNUMBER"
+        android:background="@drawable/etback"
+        app:layout_constraintStart_toStartOf="@id/ivProfileEdit"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileEdit"/>
+    <Button
+        android:id="@+id/btnSaveChange"
+        style="@style/btn"
+        android:background="@drawable/btn"
+        app:layout_constraintTop_toBottomOf="@id/etEDITNUMBER"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@id/ivProfileEdit"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileEdit"
+        android:text="SAVE CHANGES"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnDeleteChange"
+        style="@style/btn"
+        android:background="@drawable/btn"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveChange"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/btnSaveChange"
+        app:layout_constraintEnd_toEndOf="@id/btnSaveChange"
+        android:text="Delete"
+        android:textColor="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
